@@ -10,10 +10,10 @@ class Song
     @name = name
     @artist = artist
     @genre = genre
-    if !@artist_array.include? artist
+    if !@@artist_array.include? artist
       @@artist_array << artist
     end
-    if !@genre_array.include genre 
+    if !@@genre_array.include genre 
       @@genre_array << genre
     end
   end
