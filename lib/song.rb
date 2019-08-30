@@ -22,7 +22,15 @@ class Song
     @@artists.uniq
   end
   def self.artist_count
-    @@artists.count
+    artist_hash = {}
+    @@artists.each {|artist|
+      if !artist_hash.include? artist 
+        artist_hash[artist] = 1 
+      else
+        artist_hash[artist] += 1
+      end
+    }
+    artist_hash
   end
   def self.genres 
     @@genres.uniq
