@@ -5,7 +5,7 @@ class Song
   @@genre_array = []
   @@number_of_songs = 0
   
-  def new(name, artist, genre)
+  def initialize(name, artist, genre)
     @@number_of_songs += 1
     @name = name
     @artist = artist
