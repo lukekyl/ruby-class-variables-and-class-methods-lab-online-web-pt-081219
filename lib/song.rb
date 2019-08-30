@@ -19,13 +19,13 @@ class Song
   end
   
   def self.artists 
-    @@artists.squeeze
+    @@artists.uniq
   end
   def self.artist_count
     @@artists.count
   end
   def self.genres 
-    @@genres.squeeze
+    @@genres.uniq
   end
   def self.genre_count
     @@genres.count
