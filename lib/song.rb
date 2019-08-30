@@ -1,8 +1,8 @@
 class Song 
   attr_accessor :name
   attr_reader :artist, :genre
-  @@artist_array = []
-  @@genre_array = []
+  @@artists = []
+  @@genres = []
   @@number_of_songs = 0
   
   def initialize(name, artist, genre)
@@ -10,11 +10,11 @@ class Song
     @name = name
     @artist = artist
     @genre = genre
-    if !@@artist_array.include? artist
-      @@artist_array << artist
+    if !@@artists.include? artist
+      @@artists << artist
     end
-    if !@@genre_array.include? genre 
-      @@genre_array << genre
+    if !@@genres.include? genre 
+      @@genres << genre
     end
   end
   
@@ -23,15 +23,15 @@ class Song
   end
   
   def self.artists 
-    @@artist_array
+    @@artists
   end
   def self.artist_count
-    @@artist_array.count
+    @@artists.count
   end
   def self.genres 
-    @@genre_array
+    @@genres
   end
   def self.genre_count
-    @@genre_array.count
+    @@genres.count
   end
 end
