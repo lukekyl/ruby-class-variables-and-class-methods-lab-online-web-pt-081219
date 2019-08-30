@@ -28,6 +28,6 @@ class Song
     @@genres
   end
   def self.genre_count
-    @@genres.count
+    @@genres.squeeze.count
   end
 end
