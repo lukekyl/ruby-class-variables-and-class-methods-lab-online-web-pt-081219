@@ -22,7 +22,7 @@ class Song
     @@artists
   end
   def self.artist_count
-    @@artists.count
+    @@artists.squeeze.count
   end
   def self.genres 
     @@genres
