@@ -22,12 +22,12 @@ class Song
     @@artists
   end
   def self.artist_count
-    @@artists.squeeze.count
+    @@artists.count
   end
   def self.genres 
     @@genres
   end
   def self.genre_count
-    @@genres.squeeze.count
+    @@genres.count
   end
 end
