@@ -19,7 +19,7 @@ class Song
   end
   
   def self.artists 
-    @@artists
+    @@artists.squeeze
   end
   def self.artist_count
     @@artists.count
